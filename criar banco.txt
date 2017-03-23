@@ -1,0 +1,19 @@
+banco de dados => Agenda
+Tabela => Contatos
+
+Campos
+Cod - Key
+Nome
+Telefone
+e-mail
+
+//Criar banco
+CREATE DATABASE agenda
+
+//Criar Tabela
+CREATE TABLE contatos(
+cod INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+nomeCHAR( 50 ) NOT NULL ,
+telefone INT NOT NULL ,
+emailCHAR( 50 )
+)

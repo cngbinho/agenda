@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Agenda</title>
+	<script language="javascript" type="text/javascript">
+				function validarcantato() {
+					//var cod = editar.cod.value;
+					var nome = novocontato.nome.value;
+					var telefone = novocontato.telefone.value;
+					var email = novocontato.email.value;
+					 
+					if (nome == "") {
+					alert('Preencha o campo nome.');
+					novocontato.nome.focus();
+					return false;
+					}else if (telefone == "") {
+						alert('Preencha o campo telefone.');
+						novocontato.telefone.focus();
+						return false;
+					}else if (email == "") {
+						alert('Preencha o campo e-mail.');
+						novocontato.email.focus();
+						return false;
+					}
+				}
+				
+				function voltar(){
+					location.href=" index.php"
+				}
+	</script>
+	</head>
+<body>
+	<h1>Novo Contato</h1>
+	<form id="novocontato" name="novocontato" method="get" action="novocontato.php">
+		<table>
+			<tr>
+				<td>Nome:</td> 
+				<td><input name="nome" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Telefone:</td>
+				<td><input id="telefone" name="telefone" type="number" /></td>
+			</tr>
+			<tr>
+				<td>E-mail:</td>
+				<td> <input id="email" name="email" type="text" /></td>
+			</tr>
+			<tr>
+				<td><input id="btnenviar" name="btnenviar" type="submit" value="Salvar" onClick="return validarcantato()"/></td>
+				<td><input type="button" value="Cancelar" onClick="voltar()" /></td>
+			</tr>
+		</table>
+		</form>
+</body>
+</html>
